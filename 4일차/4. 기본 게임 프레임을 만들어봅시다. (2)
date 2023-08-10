@@ -1,0 +1,9 @@
+# 이벤트 루프
+running = True                                      #게임이 실행 중인가?
+while running:
+    for event in pygame.event.get():     # 어떤 이벤트가 발생하였는가?
+        if event.type == pygame.QUIT:    #창이 닫히는 이벤트인가? (창의 x버튼을 눌렀는가?)
+            running = False                         # 게임이 더 이상 실행 중이 아님
+
+# pygame 종료
+pygame.quit()
