@@ -1,0 +1,13 @@
+to_x = 0                          # 이동할 좌표 (x축 방향으로만 움직임)
+character_speed = [직접 지정해보기]     # 이동 속도
+
+        if event.type == pygame.KEYDOWN:       # 키가 눌렸는지 확인한다.
+            if event.key == pygame.K_LEFT:         # 캐릭터를 왼쪽으로 이동한다.
+                to_x -= character_speed                  # to_x = to_x - chacter_speed
+            elif event.key == pygame.K_RIGHT:    # 캐릭터를 오른쪽으로 이동한다.
+                to_x += character_speed                 # to_x = to_x + chacter_speed
+
+        if event.type == pygame.KEYUP:             # 키에서 손을 뗐는지 확인한다.
+            if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
+                to_x = 0
+    character_x_pos += to_x 
