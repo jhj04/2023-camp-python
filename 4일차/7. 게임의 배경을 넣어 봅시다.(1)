@@ -1,5 +1,5 @@
 # 배경 이미지 불러오기
-background = pygame.image.load(" [그림 위치] ")ㅍ
+background = pygame.image.load(" [그림 위치] ")
 
  screen.blit(background,(0,0))       # 맨 왼쪽 맨 위 배경 그리기
 
