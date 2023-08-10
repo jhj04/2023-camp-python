@@ -1,0 +1,19 @@
+# 가로의 경계값 설정 (캐릭터)
+    if character_x_pos < 0:
+        character_x_pos = 0
+    elif character_x_pos > screen_width - character_width:
+        character_x_pos = screen_width - character_width
+
+# 세로의 경계값 설정 (캐릭터)
+    if character_y_pos < 0:
+        character_y_pos = 0
+    elif character_y_pos > screen_height - character_height:
+        character_y_pos = screen_height - character_height
+
+#  경계값 설정 (장애물)
+    enemy_y_pos += enemy_speed
+
+    if enemy_y_pos > screen_height:
+        enemy_y_pos = 0
+        enemy_x_pos = random.randint(0,screen_width - enemy_width)
+
